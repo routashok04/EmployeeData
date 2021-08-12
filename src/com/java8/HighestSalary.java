@@ -13,10 +13,9 @@ public class HighestSalary {
         list.add(new Employee(5,"badal",30,"02/05/2021",7000000.00));
 
         Optional<Double> first = list.stream()
-                .map(s -> s.getSalary()).sorted(Comparator.reverseOrder())
+                .map( s -> s.getSalary()).sorted(Comparator.reverseOrder())
                 .skip(2).findFirst();
-        list.stream().filter(employee -> employee.getAge()>=26).collect(Collectors.toList()).forEach(System.out::println);
+       // list.stream().filter(employee -> employee.getAge()>=26).collect(Collectors.toList()).forEach(System.out::println);
         System.out.println("3rd highrst salary using java8:" +first.get());
-
     }
 }
